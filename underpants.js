@@ -127,7 +127,7 @@ _.last = function (array, number){
     } else if (number > array.length) { // check if number is greater than array
         return array; //return whole array
     } else {
-        return array.slice(number, 0)
+        return array.slice(-(number))
     }
 }
 
