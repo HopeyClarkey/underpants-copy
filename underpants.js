@@ -44,8 +44,8 @@ _.identity = function(value){
 * _.typeOf([1,2,3]) -> "array"
 */
 _.identity = function(value){
-    
-}
+
+};
 
 /** _.first
 * Arguments:
@@ -213,6 +213,21 @@ _.identity = function(value){
 *   _.map([1,2,3,4], function(e){return e * 2}) -> [2,4,6,8]
 */
 
+//_.map = function( collection, func ){ //takes a collection and a function
+//const output = []; //create return array
+    //determine if collection is an array
+//    if (Array.isArray(collection)){
+//         output.push(func(collection[i], i, collection));  //call function on 
+        //^^each element in the collection & push to output array
+//   } else {
+//      func(value, key, collection);
+//      for (let key in collection){
+
+//        }
+//    }
+
+//    return output; 
+// };
 
 /** _.pluck
 * Arguments:
