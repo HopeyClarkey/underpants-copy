@@ -169,7 +169,12 @@ _.indexOf = function (array, value){ //take array and value
 * Examples:
 *   _.contains([1,"two", 3.14], "two") -> true
 */
-
+_.contains = function (array, value){
+    //should return true if a list contains an element
+    //shoudl return false if a list does not contain an element
+    //should not convert types when checking 
+    //also worried about side effects here.
+}
 
 /** _.each
 * Arguments:
@@ -186,7 +191,10 @@ _.indexOf = function (array, value){ //take array and value
 *   _.each(["a","b","c"], function(e,i,a){ console.log(e)});
 *      -> should log "a" "b" "c" to the console
 */
-
+_.each = function (collection, func){
+    //should handle arrays
+    //should handle objects
+}
 
 /** _.unique
 * Arguments:
@@ -197,7 +205,9 @@ _.indexOf = function (array, value){ //take array and value
 * Examples:
 *   _.unique([1,2,2,4,5,6,5,2]) -> [1,2,4,5,6]
 */
-
+_.unique = function (array){
+    //should return an array with no dupes
+}
 
 /** _.filter
 * Arguments:
@@ -214,7 +224,9 @@ _.indexOf = function (array, value){ //take array and value
 * Extra Credit:
 *   use _.each in your implementation
 */
+_.filter = function(array, func){
 
+}
 
 /** _.reject
 * Arguments:
@@ -228,7 +240,9 @@ _.indexOf = function (array, value){ //take array and value
 * Examples:
 *   _.reject([1,2,3,4,5], function(e){return e%2 === 0}) -> [1,3,5]
 */
-
+_.reject = function(array, funct){
+    //should reject elements in array
+}
 
 /** _.partition
 * Arguments:
