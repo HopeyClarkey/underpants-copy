@@ -87,14 +87,16 @@ _.typeOf = function(value) {
 */
 
 _.first = function(array, number){
-    if ( Array.isArray(array)){
+    if ( !Array.isArray(array)){
         return [];
-    } else {
-    if (typeof number === 'number'){
+    } else if (typeof number !== 'number'){
         return array[0];
-    } else{
-        return array[number];
-    }
+    } else if ( number < 0){
+        return [];
+    } else if( number > array.length){
+        return array;
+    } else {
+        return array.slice(0, number);
     }
 };
 
