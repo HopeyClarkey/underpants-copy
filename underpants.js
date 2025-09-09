@@ -20,8 +20,8 @@ var _ = {};
 *   _.identity(5) === 5
 *   _.identity({a: "b"}) === {a: "b"}
 */
-_.identity = function(value){
-    return value;
+_.identity = function(value){ // take a value
+    return value;   //return that value
 };
 
 /** _.typeOf
@@ -118,13 +118,19 @@ _.first = function(array, number){
 *   _.last(["a", "b", "c"], 2) -> ["b", "c"]
 */
 _.last = function (array, number){
-    if (!Array.isArray(array)){
-        return [];
-    } else if {
-
-    }
+    if (!Array.isArray(array)){ //check if array is array
+        return []; //if not return empty array
+    } else if (typeof number !== 'number') { //check if number
+        return array.pop(); //pop off last element if not
+    } else if ( number < 0){ //check if number is negative
+        return []; //return empty array
+    } else if (number > array.length) { // check if number is greater than array
+        return array; //return whole array
+    } else {
+        return array.slice(number, 0)
     }
 }
+
 
 /** _.indexOf
 * Arguments:
