@@ -87,7 +87,7 @@ _.typeOf = function(value) {
 */
 
 _.first = function(array, number){
-    if ( !Array.isArray(array)){ //check if array is array
+    if (!Array.isArray(array)){ //check if array is array
         return [];  //return empty array if so
     } else if (typeof number !== 'number'){ // check if number
         return array[0];    //if not number, return first element in array
@@ -147,7 +147,11 @@ _.last = function (array, number){
 *   _.indexOf(["a","b","c"], "d") -> -1
 */
 _.indexOf = function (array, value){ //take array and value
-    //maybe we need to turn value into a function for this to work?
+    for (var i =0; i <array.length; i++){
+        if (i !== value){
+            return -1; 
+        }
+    }
     //should return correct index when an element is found
     //should return the index and the first occurance of a found element
     //should return -1 if the element is not found
