@@ -146,8 +146,12 @@ _.last = function (array, number){
 *   _.indexOf(["a","b","c"], "c") -> 2
 *   _.indexOf(["a","b","c"], "d") -> -1
 */
-_.indexOf = function (array, value){
-    return array.findIndex(value);
+_.indexOf = function (array, value){ //take array and value
+    //maybe we need to turn value into a function for this to work?
+    //should return correct index when an element is found
+    //should return the index and the first occurance of a found element
+    //should return -1 if the element is not found
+    //should not have side effects???????
 }
 
 
