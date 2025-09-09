@@ -171,6 +171,7 @@ _.indexOf = function (array, value){ //take array and value
 *   _.contains([1,"two", 3.14], "two") -> true
 */
 _.contains = function (array, value){
+    return array.includes(value);
     //should return true if a list contains an element
     //shoudl return false if a list does not contain an element
     //should not convert types when checking 
