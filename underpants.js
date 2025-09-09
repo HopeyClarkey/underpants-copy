@@ -22,7 +22,7 @@ var _ = {};
 */
 _.identity = function(value){
     return value;
-}
+};
 
 /** _.typeOf
 * Arguments:
@@ -43,13 +43,18 @@ _.identity = function(value){
 * _.typeOf("javascript") -> "string"
 * _.typeOf([1,2,3]) -> "array"
 */
-_.identity = function typeOf(value) {
+
+_.typeOf = function(value) {
         //check if item is string, return string
         if(typeof value === 'string') return 'string';
         //check if item is undefined, return string
         if(typeof value === undefined) return 'undefined';
         //check if item is null, return string
         if(value === null) return 'null';
+        //check if item is undefined, return string
+        if(value === undefined) return 'undefined';
+        //check if item is boolean, return string
+        if(typeof value === 'boolean') return 'boolean';
         //check if item is function, return string
         if(typeof value === 'function') return 'function';
         //check if item is number, return string
