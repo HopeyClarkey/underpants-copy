@@ -86,6 +86,17 @@ _.typeOf = function(value) {
 *   _.first(["a", "b", "c"], 2) -> ["a", "b"]
 */
 
+_.first = function(array, number){
+    if ( Array.isArray(array)){
+        return [];
+    } else {
+    if (typeof number === 'number'){
+        return array[0];
+    } else{
+        return array[number];
+    }
+    }
+};
 
 /** _.last
 * Arguments:
