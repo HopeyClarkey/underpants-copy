@@ -126,11 +126,10 @@ _.last = function (array, number){
         return []; //return empty array
     } else if (number > array.length) { // check if number is greater than array
         return array; //return whole array
-    } else {
-        return array.slice(-(number))
+    } else { //if not any of those
+        return array.slice(-(number)) //slice off that from the end and return
     }
 }
-
 
 /** _.indexOf
 * Arguments:
@@ -147,6 +146,9 @@ _.last = function (array, number){
 *   _.indexOf(["a","b","c"], "c") -> 2
 *   _.indexOf(["a","b","c"], "d") -> -1
 */
+_.indexOf = function (array, value){
+    return array.findIndex(value);
+}
 
 
 /** _.contains
