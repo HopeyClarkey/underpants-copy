@@ -43,9 +43,25 @@ _.identity = function(value){
 * _.typeOf("javascript") -> "string"
 * _.typeOf([1,2,3]) -> "array"
 */
-_.identity = function(value){
-
+_.identity = function typeOf(value) {
+        //check if item is string, return string
+        if(typeof value === 'string') return 'string';
+        //check if item is undefined, return string
+        if(typeof value === undefined) return 'undefined';
+        //check if item is null, return string
+        if(value === null) return 'null';
+        //check if item is function, return string
+        if(typeof value === 'function') return 'function';
+        //check if item is number, return string
+        if(typeof value === 'number') return 'number';
+        //check if item is date, return string
+        if (value instanceof Date) return 'date';
+        //will check if object is an array and return string
+        if(Array.isArray(value)) return 'array';
+        //check if item is an object, return string
+        if(typeof value === 'object') return 'object';
 };
+
 
 /** _.first
 * Arguments:
