@@ -87,16 +87,16 @@ _.typeOf = function(value) {
 */
 
 _.first = function(array, number){
-    if ( !Array.isArray(array)){
-        return [];
-    } else if (typeof number !== 'number'){
-        return array[0];
-    } else if ( number < 0){
-        return [];
-    } else if( number > array.length){
-        return array;
-    } else {
-        return array.slice(0, number);
+    if ( !Array.isArray(array)){ //check if array is array
+        return [];  //return empty array if so
+    } else if (typeof number !== 'number'){ // check if number
+        return array[0];    //if not number, return first element in array
+    } else if ( number < 0){ //edge case check, if number is negative
+        return [];  //return empty array
+    } else if( number > array.length){ // if number is greater than array check
+        return array;   //return the entire array
+    } else { // otherwise, return the amount of items in the array that matches number
+        return array.slice(0, number);  //slice that at 0 index to the number index
     }
 };
 
@@ -117,7 +117,14 @@ _.first = function(array, number){
 *   _.last(["a", "b", "c"], 1) -> "c"
 *   _.last(["a", "b", "c"], 2) -> ["b", "c"]
 */
+_.last = function (array, number){
+    if (!Array.isArray(array)){
+        return [];
+    } else if {
 
+    }
+    }
+}
 
 /** _.indexOf
 * Arguments:
