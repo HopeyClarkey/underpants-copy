@@ -310,7 +310,7 @@ _.reject = function(array, funct){
 */
 
 
-/** _.every
+/** _.every (think of this as 'all strings pass')
 * Arguments:
 *   1) A collection
 *   2) A function
@@ -330,7 +330,24 @@ _.reject = function(array, funct){
 *   _.every([2,4,6], function(e){return e % 2 === 0}) -> true
 *   _.every([1,2,3], function(e){return e % 2 === 0}) -> false
 */
+// _.every = function(){
+//     //check if collection is an array
+//    if(Array.isArray(collection)){
+//         // did test not recieve a function?
+//         if(!test){
+//            for (let i = 0; i < collection.length; i++){
+//                 if (!collection[i]){
+//                    return false;
+//             }
+//         }
+//     } else { // it DID get a funciton
 
+//     }
+
+//     } else { // its an object
+
+//     }
+// }
 
 /** _.some
 * Arguments:
