@@ -199,10 +199,12 @@ _.each = function (collection, func){
         for (var i = 0; i < collection.length; i++){
             func(collection[i], i, collection);
             }
-        }
+        } else {
     //should handle collections
     if (typeof collection === "object"){
-        {
+       for (let key in collection) {
+        func(collection[key], key, collection)
+            }
         }
     }
 }
