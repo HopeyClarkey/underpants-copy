@@ -237,7 +237,7 @@ _.unique = function (array){
 *   use _.each in your implementation
 */
 _.filter = function(array, func){
-
+    array.each;
 }
 
 /** _.reject
