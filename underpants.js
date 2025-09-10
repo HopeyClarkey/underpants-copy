@@ -195,7 +195,14 @@ _.contains = function (array, value){
 */
 _.each = function (collection, func){
     //should handle arrays
-    //should handle objects
+    if(Array.isArray(collection) === true){
+        for (var i = 0; i < collection.length; i++){
+            func(collection[i], collection.findIndex(collection[i]), collection);
+        }
+    //should handle collections
+    } else if (typeof collection === 'object'){
+
+    }
 }
 
 /** _.unique
