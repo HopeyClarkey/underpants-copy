@@ -197,14 +197,15 @@ _.each = function (collection, func){
     //should handle arrays
     if(Array.isArray(collection) === true){
         for (var i = 0; i < collection.length; i++){
-            func(collection[i], collection.findIndex(collection[i]), collection);
+            func(collection[i], i, collection);
+            }
         }
     //should handle collections
-    } else if (typeof collection === 'object'){
-
+    if (typeof collection === "object"){
+        {
+        }
     }
 }
-
 /** _.unique
 * Arguments:
 *   1) An array
