@@ -147,7 +147,7 @@ _.last = function (array, number){
 *   _.indexOf(["a","b","c"], "d") -> -1
 */
 _.indexOf = function (array, value){ //take array and value
-        return array.indexOf(value)
+        return array.indexOf(value) //return index of value
     }
     //should return correct index when an element is found
     //should return the index and the first occurance of a found element
@@ -170,8 +170,8 @@ _.indexOf = function (array, value){ //take array and value
 * Examples:
 *   _.contains([1,"two", 3.14], "two") -> true
 */
-_.contains = function (array, value){
-    return array.includes(value);
+_.contains = function (array, value){ 
+    return array.includes(value); //if value is in array, will pass tests
     //should return true if a list contains an element
     //shoudl return false if a list does not contain an element
     //should not convert types when checking 
@@ -195,15 +195,15 @@ _.contains = function (array, value){
 */
 _.each = function (collection, func){
     //should handle arrays
-    if(Array.isArray(collection) === true){
-        for (var i = 0; i < collection.length; i++){
-            func(collection[i], i, collection);
+    if(Array.isArray(collection) === true){ // checks if array is array
+        for (var i = 0; i < collection.length; i++){ //loops through
+            func(collection[i], i, collection); // calls function with param
             }
-        } else {
+        } else { //OR
     //should handle collections
-    if (typeof collection === "object"){
-       for (let key in collection) {
-        func(collection[key], key, collection)
+    if (typeof collection === "object"){ //checks if object
+       for (let key in collection) { //defines keys in loop
+        func(collection[key], key, collection) //calls function with param
             }
         }
     }
