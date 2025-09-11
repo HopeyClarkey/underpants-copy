@@ -219,6 +219,7 @@ _.each = function (collection, func){
 */
 _.unique = function (array){
     //should return an array with no dupes
+
 }
 
 /** _.filter
@@ -237,12 +238,6 @@ _.unique = function (array){
 *   use _.each in your implementation
 */
 _.filter = function(array, func){
-    stArr =[];
-    for (var i = 0; i < array.length; i++) {
-            if ((func(array[i], i, array)) === true){
-                stArr.push(func(array[i], i, array))
-            }
-    }
 }
 
 /** _.reject
@@ -277,7 +272,7 @@ _.reject = function(array, funct){
 *   _.partition([1,2,3,4,5], function(element,index,arr){
 *     return element % 2 === 0;
 *   }); -> [[2,4],[1,3,5]]
-}
+*
 */
 
 
