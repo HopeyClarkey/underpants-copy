@@ -292,7 +292,19 @@ _.reject = function(array, func){
 *   }); -> [[2,4],[1,3,5]]
 *
 */
-
+_.partition = function(array, func) {
+    let stArr = [];//create storage array for truths
+    let stArr2 = []; //create storage array for false
+    let retArr = [stArr, stArr2];
+    for (var i = 0; i < array.length; i++){ //loop through array
+        if ((func(array[i], i, array)) === true){ //call function and pass element, index, array inside if
+        stArr.push(array[i]); //push truths to storage array
+        } else{
+        stArr2.push(array[i]); //push truths to storage array
+       }
+    }
+return retArr;
+}
 
 /** _.map
 * Arguments:
