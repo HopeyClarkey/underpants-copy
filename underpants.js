@@ -129,7 +129,7 @@ _.last = function (array, number){
     } else { //if not any of those
         return array.slice(-(number)) //slice off that from the end and return
     }
-}
+};
 
 /** _.indexOf
 * Arguments:
@@ -153,9 +153,6 @@ _.indexOf = function (array, value){ //take array and value
     //should return the index and the first occurance of a found element
     //should return -1 if the element is not found
     //should not have side effects???????
-
-
-
 /** _.contains
 * Arguments:
 *   1) An array
@@ -176,7 +173,7 @@ _.contains = function (array, value){
     //shoudl return false if a list does not contain an element
     //should not convert types when checking 
     //also worried about side effects here.
-}
+};
 
 /** _.each
 * Arguments:
@@ -207,7 +204,7 @@ _.each = function (collection, func){
             }
         }
     }
-}
+};
 /** _.unique
 * Arguments:
 *   1) An array
@@ -217,9 +214,15 @@ _.each = function (collection, func){
 * Examples:
 *   _.unique([1,2,2,4,5,6,5,2]) -> [1,2,4,5,6]
 */
+
 _.unique = function (array){
     //should return an array with no dupes
-
+    let stArr = []; // create storage array
+        for (var i =0; i < array.length; i++) { //loop through array
+            if (stArr.indexOf(array[i]) === -1 && array[i] !=='') //compare index & its neighbors
+                stArr.push(array[i]); //push i to storage array
+            }
+    return stArr; //return storage array
 }
 
 /** _.filter
