@@ -241,6 +241,13 @@ _.unique = function (array){
 *   use _.each in your implementation
 */
 _.filter = function(array, func){
+    let stArr = [];//create storage array
+    for (var i = 0; i < array.length; i++){ //loop through array
+        if ((func(array[i], i, array)) === true){ //call function and pass element, index, array inside if
+        stArr.push(array[i]); //push truths to storage array
+        }
+    }
+    return stArr; //return storage array
 }
 
 /** _.reject
@@ -255,9 +262,17 @@ _.filter = function(array, func){
 * Examples:
 *   _.reject([1,2,3,4,5], function(e){return e%2 === 0}) -> [1,3,5]
 */
-_.reject = function(array, funct){
+_.reject = function(array, func){
     //should reject elements in array
+    let stArr = [];//create storage array
+    for (var i = 0; i < array.length; i++){ //loop through array
+        if ((func(array[i], i, array)) !== true){ //call function and bang out the true
+        stArr.push(array[i]); //push truths to storage array
+        }
+    }
+    return stArr; //return storage array
 }
+
 
 /** _.partition
 * Arguments:
