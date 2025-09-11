@@ -347,6 +347,10 @@ _.map = function( collection, func ){ //takes a collection and a function
 * Examples:
 *   _.pluck([{a: "one"}, {a: "two"}], "a") -> ["one", "two"]
 */
+_.pluck = function(array, key){
+   return _.map(array, (obj)=> obj[key]);
+}
+
 
 
 /** _.every (think of this as 'all strings pass')
@@ -369,24 +373,24 @@ _.map = function( collection, func ){ //takes a collection and a function
 *   _.every([2,4,6], function(e){return e % 2 === 0}) -> true
 *   _.every([1,2,3], function(e){return e % 2 === 0}) -> false
 */
-// _.every = function(){
-//     //check if collection is an array
-//    if(Array.isArray(collection)){
-//         // did test not recieve a function?
-//         if(!test){
-//            for (let i = 0; i < collection.length; i++){
-//                 if (!collection[i]){
-//                    return false;
-//             }
-//         }
-//     } else { // it DID get a funciton
+_.every = function(collection, func){
+   //check if collection is an array
+  if(Array.isArray(collection)){
+       // did test not recieve a function?
+      if(!test){
+       for (let i = 0; i < collection.length; i++){
+             if (!collection[i]){
+                 return false;
+           }
+       }
+  } else { // it DID get a funciton
 
-//     }
+    }
 
-//     } else { // its an object
+    } else { // its an object
 
-//     }
-// }
+     }
+ }
 
 /** _.some
 * Arguments:
