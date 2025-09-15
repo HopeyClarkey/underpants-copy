@@ -433,6 +433,22 @@ _.every = function(collection, func){
 *   _.reduce([1,2,3], function(previousSum, currentValue, currentIndex){ return previousSum + currentValue }, 0) -> 6
 */
 
+_.reduce = function(array, func, seed){
+    let output; //intitialize output variable
+        if (seed === undefined){
+            output = array [0]; //basically create seed
+            for (let i = 1; i< array.length; i++){ //loop through array
+                output = func(output, array[i], i) //how to accumulate output
+            }
+        } else {
+            output = seed;
+            for (let i = 0; i < array.length; i++){
+                output = func(output, array[i], i)
+            }
+        }
+    return output; //return output value
+}
+
 
 /** _.extend
 * Arguments:
