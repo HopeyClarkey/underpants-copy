@@ -376,7 +376,7 @@ _.pluck = function(array, key){
 _.every = function(collection, func){
     if (func === undefined){ //checks if function exists
         func = function(value){ // reassigns function to the value of elements if n
-           return value; 
+           return value; //returns the truthy or falsy bits?
         }
     }
     if(Array.isArray(collection)){ //check if array
@@ -385,7 +385,7 @@ _.every = function(collection, func){
                 return false;   //return false
             }
         }
-    } else{
+    } else{ // if is object
         for (let key in collection){ //define keys in object/loop
             if (!func(collection[key], key, collection)){ //if function on keys is NOT truthy or returns false
                 return false; //returns false
