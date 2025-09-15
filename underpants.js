@@ -441,9 +441,9 @@ _.reduce = function(array, func, seed){
                 output = func(output, array[i], i) //how to accumulate output
             }
         } else {
-            output = seed;
-            for (let i = 0; i < array.length; i++){
-                output = func(output, array[i], i)
+            output = seed;  //start output at seed value
+            for (let i = 0; i < array.length; i++){ //loop through array
+                output = func(output, array[i], i) //update output with function applied to output, iteration value, and iteration (if needed)
             }
         }
     return output; //return output value
