@@ -435,7 +435,25 @@ _.every = function(collection, func){
 *   _.some([1,2,3], function(e){return e % 2 === 0}) -> true
 */
 _.some = function(collection, func){
-
+    if (func === undefined){ //checks if function exists
+        func = function(value){ // reassigns function to the value of elements if n
+           return value; //returns the truthy or falsy bits?
+        }
+    }
+    if(Array.isArray(collection)){ //check if array
+        for (let i = 0; i < collection.length; i++){ //loop through array
+            if (!func(collection[i], i, collection)) { //if function is NOT truthy or returns false
+                return false;   //return false
+            }
+        }
+    } else{ // if is object
+        for (let key in collection){ //define keys in object/loop
+            if (!func(collection[key], key, collection)){ //if function on keys is NOT truthy or returns false
+                return false; //returns false
+            }
+        }
+    }
+    return true;
 }
 
 /** _.reduce
