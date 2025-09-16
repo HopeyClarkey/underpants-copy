@@ -489,8 +489,15 @@ _.reduce = function(array, func, seed){
 *   _.extend(data, {a:"two"}); -> data now equals {a:"two"}
 */
 
-_.extend = function(objOne, objectTwo){
-
+_.extend = function(...objs){ //use a rest obj to represent any number of params(???????????)
+    let copied = objs[0]; //define first object as something copied
+    for(let i = 1; i < objs.length; i++){ //loop through objects passed in
+        let currentObj =objs[i]; //define currernt object in loop
+        for (let key in currentObj){ //define keys for the current object
+            copied[key] = currentObj[key]; //update the original object with loop stuff
+        } //clos loop for object
+    } //close loop of objects
+    return copied; //return result
 }
 //////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////
