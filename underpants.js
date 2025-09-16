@@ -442,18 +442,18 @@ _.some = function(collection, func){
     }
     if(Array.isArray(collection)){ //check if array
         for (let i = 0; i < collection.length; i++){ //loop through array
-            if (!func(collection[i], i, collection)) { //if function is NOT truthy or returns false
-                return false;   //return false
+            if (func(collection[i], i, collection)) { //if function is NOT truthy or returns false
+                return true;   //return false
             }
         }
     } else{ // if is object
         for (let key in collection){ //define keys in object/loop
-            if (!func(collection[key], key, collection)){ //if function on keys is NOT truthy or returns false
-                return false; //returns false
+            if (func(collection[key], key, collection)){ //if function on keys is NOT truthy or returns false
+                return true; //returns false
             }
         }
     }
-    return true;
+    return false;
 }
 
 /** _.reduce
